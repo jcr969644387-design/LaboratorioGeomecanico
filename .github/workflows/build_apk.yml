@@ -3,8 +3,14 @@ name: Build APK
 on:
   workflow_dispatch:
   push:
+    branches:
+      - main
     tags:
       - "v*"
+      - "LaboratorioGeomecanico[Vv]*"
+
+permissions:
+  contents: write
 
 jobs:
   build_universal_apk:
@@ -27,6 +33,11 @@ jobs:
           channel: stable
           cache: true
 
+      - name: Mostrar versiones de las herramientas
+        run: |
+          flutter --version
+          java -version
+
       - name: Instalar dependencias
         run: flutter pub get
 
@@ -36,14 +47,38 @@ jobs:
       - name: Compilar APK universal
         run: flutter build apk --release
 
-      - name: Verify APK
+      - name: Renombrar el APK con la version
+        id: apk
         run: |
-          test -f build/app/outputs/flutter-apk/app-release.apk
-          ls -lh build/app/outputs/flutter-apk/app-release.apk
+          set -euo pipefail
+          origen=build/app/outputs/flutter-apk/app-release.apk
+          test -f "$origen"
+          if [ "${GITHUB_REF_TYPE:-branch}" = "tag" ]; then
+            version="${GITHUB_REF_NAME}"
+          else
+            version="main-${GITHUB_SHA::7}"
+          fi
+          mkdir -p dist
+          destino="dist/LaboratorioGeomecanico-${version}.apk"
+          cp "$origen" "$destino"
+          ls -lh "$destino"
+          echo "path=${destino}" >> "$GITHUB_OUTPUT"
+          echo "name=LaboratorioGeomecanico-${version}" >> "$GITHUB_OUTPUT"
 
-      - name: Upload universal APK
+      - name: Subir APK como artefacto
         uses: actions/upload-artifact@v4
         with:
-          name: laboratorio-geomecanico-apk
-          path: build/app/outputs/flutter-apk/app-release.apk
+          name: ${{ steps.apk.outputs.name }}
+          path: ${{ steps.apk.outputs.path }}
           if-no-files-found: error
+
+      - name: Publicar release con el APK adjunto
+        if: github.ref_type == 'tag'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh release create "${GITHUB_REF_NAME}" \
+            "${{ steps.apk.outputs.path }}" \
+            --title "${GITHUB_REF_NAME}" \
+            --notes "APK universal de release. Firmado con la clave de depuracion, solo para instalacion educativa: habilita 'Instalar apps de origenes desconocidos' en el telefono." \
+            --latest
