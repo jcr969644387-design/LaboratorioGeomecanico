@@ -1,0 +1,22 @@
+# Reglas de análisis estático del proyecto Laboratorio Geomecánico.
+include: package:flutter_lints/flutter.yaml
+
+analyzer:
+  errors:
+    # Evita que la CI se rompa cuando una API de Flutter queda marcada
+    # como obsoleta en una versión posterior del canal stable.
+    deprecated_member_use: ignore
+    deprecated_member_use_from_same_package: ignore
+  exclude:
+    - build/**
+    - "**/*.g.dart"
+    - "**/*.freezed.dart"
+
+linter:
+  rules:
+    # Reglas desactivadas por ruido en widgets largos; el resto de
+    # flutter_lints permanece activo.
+    prefer_const_constructors: false
+    prefer_const_literals_to_create_immutables: false
+    prefer_const_constructors_in_immutables: false
+    use_super_parameters: false
