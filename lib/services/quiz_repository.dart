@@ -48,8 +48,7 @@ class QuizRepository {
           'La presión del agua en las juntas',
         ],
         correctIndex: 1,
-        explanation:
-            'El RQD es un índice de recuperación: suma los tramos de '
+        explanation: 'El RQD es un índice de recuperación: suma los tramos de '
             'testigo mayores a 10 cm y los divide entre la longitud '
             'perforada. Es un indicador del tamaño de bloque.',
       ),
@@ -72,8 +71,7 @@ class QuizRepository {
       const QuizQuestion(
         id: 'q05',
         topic: 'Sistema Q',
-        prompt:
-            'Si Ja aumenta por relleno arcilloso, ¿qué ocurre con el Q?',
+        prompt: 'Si Ja aumenta por relleno arcilloso, ¿qué ocurre con el Q?',
         options: <String>[
           'Aumenta, porque el relleno rellena las juntas',
           'Disminuye, porque baja la resistencia al corte',
@@ -88,8 +86,7 @@ class QuizRepository {
       const QuizQuestion(
         id: 'q06',
         topic: 'Discontinuidades',
-        prompt:
-            'Dos labores tienen el mismo RMR básico, pero una tiene '
+        prompt: 'Dos labores tienen el mismo RMR básico, pero una tiene '
             'familias paralelas al eje con buzamiento hacia la labor. '
             '¿Qué sucede?',
         options: <String>[
@@ -125,8 +122,7 @@ class QuizRepository {
       const QuizQuestion(
         id: 'q08',
         topic: 'Sostenimiento',
-        prompt:
-            'En una labor clase IV con tránsito permanente de personal, '
+        prompt: 'En una labor clase IV con tránsito permanente de personal, '
             '¿qué sostenimiento preliminar es más razonable?',
         options: <String>[
           'Sin sostenimiento, solo desatado',
@@ -136,16 +132,14 @@ class QuizRepository {
           'Sostenimiento diferido al final del tramo',
         ],
         correctIndex: 2,
-        explanation:
-            'En clase IV el tiempo de autosostenimiento es corto: el '
+        explanation: 'En clase IV el tiempo de autosostenimiento es corto: el '
             'sostenimiento debe seguir al avance y retener los fragmentos '
             'sobre el área de trabajo.',
       ),
       const QuizQuestion(
         id: 'q09',
         topic: 'Sostenimiento',
-        prompt:
-            '¿Qué efecto tiene aumentar la luz de la excavación de 4 m a '
+        prompt: '¿Qué efecto tiene aumentar la luz de la excavación de 4 m a '
             '12 m manteniendo la misma calidad de macizo?',
         options: <String>[
           'Ninguno, el sostenimiento depende solo del RMR',
@@ -163,8 +157,7 @@ class QuizRepository {
       const QuizQuestion(
         id: 'q10',
         topic: 'Riesgos geomecánicos',
-        prompt:
-            '¿Cuál es el uso correcto de una clasificación geomecánica '
+        prompt: '¿Cuál es el uso correcto de una clasificación geomecánica '
             'como el RMR o el Q?',
         options: <String>[
           'Reemplazar el criterio del ingeniero responsable',
@@ -174,8 +167,7 @@ class QuizRepository {
           'Aplicarse por igual a cualquier material, incluido el suelo',
         ],
         correctIndex: 1,
-        explanation:
-            'Las clasificaciones son herramientas empíricas de apoyo: '
+        explanation: 'Las clasificaciones son herramientas empíricas de apoyo: '
             'orientan el diseño preliminar, pero requieren verificación '
             'con mapeo geomecánico, análisis específico y monitoreo.',
       ),

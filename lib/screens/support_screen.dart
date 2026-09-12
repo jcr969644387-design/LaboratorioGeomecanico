@@ -68,8 +68,7 @@ class SupportScreen extends StatelessWidget {
               min: Limits.spanMin,
               max: Limits.spanMax,
               decimals: 1,
-              helperText:
-                  'A mayor luz, mayor área expuesta del techo y mayor '
+              helperText: 'A mayor luz, mayor área expuesta del techo y mayor '
                   'volumen potencial de cuñas.',
               onChanged: (double value) {
                 state.updateSupportQuery(query.copyWith(spanM: value));

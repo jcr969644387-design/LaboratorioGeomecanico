@@ -21,11 +21,9 @@ class CaseRepository {
     return CaseStudy(
       id: 'caso-01',
       title: 'Labor en roca muy buena',
-      summary:
-          'Galería de avance en un cuerpo intrusivo fresco, sin evidencia '
+      summary: 'Galería de avance en un cuerpo intrusivo fresco, sin evidencia '
           'de agua.',
-      geology:
-          'Granodiorita masiva, poco alterada, con dos familias de '
+      geology: 'Granodiorita masiva, poco alterada, con dos familias de '
           'discontinuidades cerradas y rugosas. Las paredes se mantienen '
           'estables varios días después de la voladura.',
       rockMass: const RockMassInput(
@@ -59,8 +57,7 @@ class CaseRepository {
             'Shotcrete en toda la sección',
           ],
           correctIndex: 1,
-          feedback:
-              'En clase I el macizo es autosoportante para esta luz; el '
+          feedback: 'En clase I el macizo es autosoportante para esta luz; el '
               'control de bloques sueltos sigue siendo obligatorio.',
         ),
       ],
@@ -79,11 +76,9 @@ class CaseRepository {
     return CaseStudy(
       id: 'caso-02',
       title: 'Labor en roca regular',
-      summary:
-          'Labor de producción en roca volcánica fracturada en bloques '
+      summary: 'Labor de producción en roca volcánica fracturada en bloques '
           'medianos.',
-      geology:
-          'Andesita con tres familias de discontinuidades, superficies '
+      geology: 'Andesita con tres familias de discontinuidades, superficies '
           'ligeramente rugosas y paredes alteradas. Se observa humedad en '
           'las cajas.',
       rockMass: const RockMassInput(
@@ -120,8 +115,7 @@ class CaseRepository {
             'Cerchas metálicas en todo el tramo',
           ],
           correctIndex: 1,
-          feedback:
-              'En clase III se controla la formación de cuñas con pernos '
+          feedback: 'En clase III se controla la formación de cuñas con pernos '
               'sistemáticos; la malla retiene los fragmentos pequeños.',
         ),
       ],
@@ -141,8 +135,7 @@ class CaseRepository {
       id: 'caso-03',
       title: 'Labor en roca mala',
       summary: 'Acceso en zona de falla con macizo muy fracturado.',
-      geology:
-          'Roca intensamente fracturada y alterada, con relleno arcilloso '
+      geology: 'Roca intensamente fracturada y alterada, con relleno arcilloso '
           'blando en las discontinuidades y bloques centimétricos.',
       rockMass: const RockMassInput(
         ucsMpa: 30,
@@ -166,8 +159,7 @@ class CaseRepository {
             'No cambia respecto a la clase III',
           ],
           correctIndex: 1,
-          feedback:
-              'En clase IV el techo puede empezar a descostrarse en las '
+          feedback: 'En clase IV el techo puede empezar a descostrarse en las '
               'primeras horas posteriores al disparo.',
         ),
         CaseQuestion(
@@ -198,11 +190,9 @@ class CaseRepository {
     return CaseStudy(
       id: 'caso-04',
       title: 'Excavación con presencia de agua',
-      summary:
-          'Galería que intercepta una estructura permeable con flujo '
+      summary: 'Galería que intercepta una estructura permeable con flujo '
           'continuo.',
-      geology:
-          'Macizo de calidad media atravesado por una estructura abierta '
+      geology: 'Macizo de calidad media atravesado por una estructura abierta '
           'que conduce agua. Se observa lavado del relleno y goteo '
           'permanente en el techo.',
       rockMass: const RockMassInput(
@@ -228,8 +218,7 @@ class CaseRepository {
             'Porque aumenta el RQD',
           ],
           correctIndex: 1,
-          feedback:
-              'El agua actúa sobre las discontinuidades: baja la '
+          feedback: 'El agua actúa sobre las discontinuidades: baja la '
               'resistencia al corte y arrastra el material de relleno.',
         ),
         CaseQuestion(
@@ -240,8 +229,7 @@ class CaseRepository {
             'Reducir la ventilación',
           ],
           correctIndex: 1,
-          feedback:
-              'Sin drenaje, el shotcrete no adhiere correctamente y la '
+          feedback: 'Sin drenaje, el shotcrete no adhiere correctamente y la '
               'presión de agua sigue actuando detrás del sostenimiento.',
         ),
       ],
@@ -260,10 +248,8 @@ class CaseRepository {
     return CaseStudy(
       id: 'caso-05',
       title: 'Excavación con discontinuidades desfavorables',
-      summary:
-          'Cámara de gran luz con familias paralelas al eje de la labor.',
-      geology:
-          'Roca de resistencia media con dos familias principales de '
+      summary: 'Cámara de gran luz con familias paralelas al eje de la labor.',
+      geology: 'Roca de resistencia media con dos familias principales de '
           'buzamiento pronunciado, subparalelas al eje de la excavación, '
           'que definen cuñas de gran volumen en el techo.',
       rockMass: const RockMassInput(
@@ -288,8 +274,7 @@ class CaseRepository {
             'Porque el espaciamiento es mínimo',
           ],
           correctIndex: 0,
-          feedback:
-              'La orientación muy desfavorable aplica el ajuste máximo '
+          feedback: 'La orientación muy desfavorable aplica el ajuste máximo '
               'negativo y refleja el riesgo real de cuñas.',
         ),
         CaseQuestion(

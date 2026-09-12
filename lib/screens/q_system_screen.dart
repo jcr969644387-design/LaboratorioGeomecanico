@@ -192,23 +192,20 @@ class _QFactorsCard extends StatelessWidget {
       children: <Widget>[
         _FactorTile(
           title: 'RQD / Jn = ${Fmt.decimal(result.blockSize)}',
-          text:
-              'Representa el tamaño relativo del bloque. Un RQD alto con '
+          text: 'Representa el tamaño relativo del bloque. Un RQD alto con '
               'pocas familias produce bloques grandes y estables.',
           style: theme.textTheme.bodySmall,
         ),
         _FactorTile(
           title: 'Jr / Ja = ${Fmt.decimal(result.shearStrength)}',
-          text:
-              'Representa la resistencia al corte entre bloques. La '
+          text: 'Representa la resistencia al corte entre bloques. La '
               'rugosidad (Jr) ayuda a la estabilidad y la alteración o el '
               'relleno (Ja) la reduce.',
           style: theme.textTheme.bodySmall,
         ),
         _FactorTile(
           title: 'Jw / SRF = ${Fmt.decimal(result.activeStress)}',
-          text:
-              'Representa el esfuerzo activo. El agua (Jw) y las '
+          text: 'Representa el esfuerzo activo. El agua (Jw) y las '
               'condiciones de esfuerzo o zonas de falla (SRF) castigan el '
               'resultado final.',
           style: theme.textTheme.bodySmall,

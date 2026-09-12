@@ -15,8 +15,7 @@ class LaboratorioGeomecanicoApp extends StatefulWidget {
   }
 }
 
-class _LaboratorioGeomecanicoAppState
-    extends State<LaboratorioGeomecanicoApp> {
+class _LaboratorioGeomecanicoAppState extends State<LaboratorioGeomecanicoApp> {
   final AppState _state = AppState();
 
   @override

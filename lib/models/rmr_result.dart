@@ -44,8 +44,7 @@ class RmrClassInfo {
         quality: 'Roca muy buena',
         rangeLabel: 'RMR 81-100',
         risk: RiskLevel.low,
-        description:
-            'Macizo competente, poco fracturado y sin agua relevante. '
+        description: 'Macizo competente, poco fracturado y sin agua relevante. '
             'La excavación es normalmente autosoportante en luces pequeñas.',
       );
     }
@@ -66,8 +65,7 @@ class RmrClassInfo {
         quality: 'Roca regular',
         rangeLabel: 'RMR 41-60',
         risk: RiskLevel.medium,
-        description:
-            'Macizo fracturado en bloques. La estabilidad depende del '
+        description: 'Macizo fracturado en bloques. La estabilidad depende del '
             'tiempo de autosostenimiento y del control de las cuñas.',
       );
     }
@@ -77,8 +75,7 @@ class RmrClassInfo {
         quality: 'Roca mala',
         rangeLabel: 'RMR 21-40',
         risk: RiskLevel.high,
-        description:
-            'Macizo muy fracturado o alterado. Requiere sostenimiento '
+        description: 'Macizo muy fracturado o alterado. Requiere sostenimiento '
             'sistemático e inmediato después de la voladura.',
       );
     }

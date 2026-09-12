@@ -71,8 +71,7 @@ class RockMassScreen extends StatelessWidget {
               value: input.spacingM,
               min: Limits.spacingMin,
               max: Limits.spacingMax,
-              helperText:
-                  'Distancia media entre juntas de una misma familia. '
+              helperText: 'Distancia media entre juntas de una misma familia. '
                   'Define el tamaño del bloque.',
               onChanged: (double value) {
                 state.updateRockMass(input.copyWith(spacingM: value));

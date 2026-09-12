@@ -74,8 +74,7 @@ class LocalRuleTutor implements TutorEngine {
     return TutorMessage(
       title: '¿Por qué el RMR $direction?',
       tone: rmr.finalRmr >= 61 ? TutorTone.positive : TutorTone.warning,
-      body:
-          'La suma de los cinco parámetros da ${rmr.basicRmr} y el ajuste '
+      body: 'La suma de los cinco parámetros da ${rmr.basicRmr} y el ajuste '
           'por orientación aporta ${rmr.orientationAdjustment}, con lo que '
           'el RMR final es ${rmr.finalRmr} (clase '
           '${rmr.classInfo.roman}). El parámetro que más puntaje pierde es '
@@ -103,8 +102,7 @@ class LocalRuleTutor implements TutorEngine {
 
     return TutorMessage(
       title: 'Cómo influye el RQD',
-      body:
-          'El RQD de ${input.rqd.toStringAsFixed(0)} % describe '
+      body: 'El RQD de ${input.rqd.toStringAsFixed(0)} % describe '
           '$interpretation. El RQD mide el porcentaje de testigos sanos '
           'mayores a 10 cm en una corrida de perforación, por lo que es un '
           'indicador directo del tamaño de bloque: a menor RQD, más '
@@ -115,8 +113,7 @@ class LocalRuleTutor implements TutorEngine {
   TutorMessage _jointMessage(RockMassInput input) {
     return TutorMessage(
       title: 'Cómo afectan las discontinuidades',
-      body:
-          'Con un espaciamiento de ${input.spacingM.toStringAsFixed(2)} m y '
+      body: 'Con un espaciamiento de ${input.spacingM.toStringAsFixed(2)} m y '
           'una condición ${input.jointCondition.label.toLowerCase()}, la '
           'resistencia del macizo la controlan las juntas y no la roca '
           'intacta. ${input.jointCondition.detail} Además, la orientación '
@@ -131,8 +128,7 @@ class LocalRuleTutor implements TutorEngine {
     return TutorMessage(
       title: 'Por qué el agua aumenta el riesgo',
       tone: TutorTone.warning,
-      body:
-          'La condición ${input.groundwater.label.toLowerCase()} resta '
+      body: 'La condición ${input.groundwater.label.toLowerCase()} resta '
           'puntaje porque el agua reduce el esfuerzo efectivo en las '
           'discontinuidades, lava el relleno, ablanda los minerales '
           'arcillosos y agrega presión hidrostática sobre los bloques. El '
@@ -144,8 +140,7 @@ class LocalRuleTutor implements TutorEngine {
   TutorMessage _qMessage(QResult q) {
     return TutorMessage(
       title: 'Lectura del índice Q',
-      body:
-          'Q vale ${q.q.toStringAsFixed(2)} (${q.classInfo.label}). El '
+      body: 'Q vale ${q.q.toStringAsFixed(2)} (${q.classInfo.label}). El '
           'cociente RQD/Jn = ${q.blockSize.toStringAsFixed(2)} representa '
           'el tamaño de bloque, Jr/Ja = '
           '${q.shearStrength.toStringAsFixed(2)} la resistencia al corte '
@@ -159,8 +154,7 @@ class LocalRuleTutor implements TutorEngine {
     return TutorMessage(
       title: 'Por qué se recomienda ese sostenimiento',
       tone: support.level >= 4 ? TutorTone.warning : TutorTone.info,
-      body:
-          '${support.justification} Por eso el sistema preliminar es: '
+      body: '${support.justification} Por eso el sistema preliminar es: '
           '${support.system}. Recuerda que el nivel de confianza es '
           '${support.confidence.label.toLowerCase()} y que se trata de una '
           'referencia educativa, no de un diseño aprobado.',
